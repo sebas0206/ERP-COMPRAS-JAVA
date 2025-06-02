@@ -1,0 +1,13 @@
+SistemaComprasVSCode/
+└── src/
+    └── erp/
+        ├── Main.java
+        ├── Controlador.java
+        ├── Entidad.java           (abstracta)
+        ├── Proveedor.java        (hereda de Entidad)
+        ├── Producto.java         (implementa Calculable)
+        ├── SolicitudCompra.java  (hereda de Documento)
+        ├── Documento.java        (abstracta, implementa Calculable)
+        ├── Item.java             (implementa Calculable)
+        ├── Calculable.java       (interfaz funcional)
+        └── EstadoSolicitud.java  (enum)
