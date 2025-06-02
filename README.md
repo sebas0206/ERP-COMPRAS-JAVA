@@ -13,13 +13,13 @@
 Este proyecto es un módulo de compras desarrollado como parte de un sistema ERP en Java. Permite automatizar tareas relacionadas con la gestión
 de proveedores, productos y solicitudes de compra, usando principios de Programación Orientada a Objetos (POO).
 
-## Funcionalidades
+## Características
 
-- Registro de *proveedores* y *productos* asociados.
-- Creación de *solicitudes de compra* por parte de distintos departamentos.
-- Estados de solicitud: `SOLICITADA`, `EN_REVISION`, `APROBADA`, `RECHAZADA`.
-- Cálculo automático del *total* de cada solicitud.
-- Interfaz de *menú en consola* para registrar, listar, buscar y aprobar solicitudes.
+- Registro y listado de proveedores y productos.
+- Creación de solicitudes de compra por departamento.
+- Control de estados de solicitudes: SOLICITADA, EN_REVISIÓN, APROBADA, RECHAZADA.
+- Cálculo de costos totales usando una interfaz `Calculable`.
+- Menú interactivo en consola.
 
 ## Conceptos Basicos del Proyecto
 
