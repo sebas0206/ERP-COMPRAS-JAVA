@@ -1,8 +1,11 @@
 # Autor:
 
 -*Nombre:* Mateo Sebastian Tacuri Chuchuca
+
 -*Universidad:* UPS
+
 -*CI:* 0150552073
+
 -*Carrera:* Electronica y Automatizacion.
 
 # Sistema de Gestión de Compras ERP
