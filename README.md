@@ -38,7 +38,11 @@ de proveedores, productos y solicitudes de compra, usando principios de Programa
 | Enums           | `EstadoSolicitud`                                   |
 | Polimorfismo    | Procesamiento dinámico de objetos `Calculable`      |
 
-## ▶Cómo ejecutar el proyecto
+## Diagrama de Clases del Proyecto
+
+![image](https://github.com/user-attachments/assets/71b711f4-b6d4-4d74-881b-2422873a3ea0)
+
+## Cómo ejecutar el proyecto
 
 Dentro de la linea de comandos, desde nuestra terminal, vamos a ejecutar el siguienre codigo:
 
