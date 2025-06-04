@@ -1,6 +1,12 @@
 ## SISTEMA DE COMPRAR IMPLEMENTADO EN JAVA ERP.
 ## EXAMEN INTERCICLO DE PROGRAMACION ORIENTADA A OBJETOS
 
+# Enlace de Github:
+En el siguiente enlace, podra encontrar el protecto completo, con todos los archivos y los diagramas explicando el funcionamiento y la estructura
+del proyecto.
+
+    https://github.com/sebas0206/ERP-COMPRAS-JAVA.git
+
 # Autor:
 
 -*Nombre:* Mateo Sebastian Tacuri Chuchuca
