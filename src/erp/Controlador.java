@@ -22,11 +22,12 @@ public class Controlador {
                 case 5 -> listarProductos();
                 case 6 -> listarSolicitudes();
                 case 7 -> buscarProveedorPorID();
-                case 8 -> buscarProductoPorNombre();
-                case 9 -> buscarSolicitudPorNumero();
-                case 13 -> aprobarORechazarSolicitud();
-                case 14 -> calcularTotalSolicitud();
-                case 15 -> System.out.println("¡Hasta luego!");
+                case 8 -> buscarProveedorPorNombre();
+                case 9 -> buscarProductoPorNombre();
+                case 10 -> buscarSolicitudPorNumero();
+                case 11 -> aprobarORechazarSolicitud();
+                case 12 -> calcularTotalSolicitud();
+                case 13 -> System.out.println("¡Hasta luego!");
                 default -> System.out.println("Opción inválida");
             }
         } while (opcion != 15);
@@ -34,29 +35,54 @@ public class Controlador {
 
     private void mostrarMenu() {
         System.out.println("\n===== SISTEMA DE GESTIÓN DE COMPRAS ERP =====");
-        System.out.println("1. Registrar proveedor");
-        System.out.println("2. Registrar producto");
-        System.out.println("3. Registrar solicitud de compra");
-        System.out.println("4. Listar proveedores");
-        System.out.println("5. Listar productos");
-        System.out.println("6. Listar solicitudes de compra");
-        System.out.println("7. Buscar proveedor por ID");
-        System.out.println("8. Buscar producto por nombre");
-        System.out.println("9. Buscar solicitud por número");
-        System.out.println("13. Aprobar / Rechazar solicitud de compra");
-        System.out.println("14. Calcular total de una solicitud");
-        System.out.println("15. Salir");
+        System.out.println("1.  Registrar proveedor");
+        System.out.println("2.  Registrar producto");
+        System.out.println("3.  Registrar solicitud de compra");
+        System.out.println("4.  Listar proveedores");
+        System.out.println("5.  Listar productos");
+        System.out.println("6.  Listar solicitudes de compra");
+        System.out.println("7.  Buscar proveedor por ID");
+        System.out.println("8.  Buscar proveedor por Nombre");
+        System.out.println("9.  Buscar producto por nombre");
+        System.out.println("10. Buscar solicitud por número");
+        System.out.println("11. Aprobar / Rechazar solicitud de compra");
+        System.out.println("12. Calcular total de una solicitud");
+        System.out.println("13. Salir");
         System.out.print("Seleccione una opción: ");
     }
 
+    // private void registrarProveedor() {
+    //     System.out.print("Nombre del proveedor: ");
+    //     String nombre = scanner.nextLine();
+    //     System.out.print("ID del proveedor: ");
+    //     String id = scanner.nextLine();
+    //     proveedores.add(new Proveedor(nombre, id));
+    //     System.out.println("Proveedor registrado con éxito.");
+    // }
+
     private void registrarProveedor() {
-        System.out.print("Nombre del proveedor: ");
-        String nombre = scanner.nextLine();
-        System.out.print("ID del proveedor: ");
-        String id = scanner.nextLine();
-        proveedores.add(new Proveedor(nombre, id));
-        System.out.println("Proveedor registrado con éxito.");
+    System.out.print("Nombre del proveedor: ");
+    String nombre = scanner.nextLine();
+    System.out.print("ID del proveedor: ");
+    String id = scanner.nextLine();
+
+    // Verificar si ya existe un proveedor con el mismo ID o nombre
+    for (Proveedor p : proveedores) {
+        if (p.getId().equalsIgnoreCase(id)) {
+            System.out.println("Ya existe un proveedor con ese ID.");
+            return;
+        }
+        if (p.getNombre().equalsIgnoreCase(nombre)) {
+            System.out.println("Ya existe un proveedor con ese nombre.");
+            return;
+        }
     }
+
+    // Si pasa las validaciones, agregar el proveedor
+    proveedores.add(new Proveedor(nombre, id));
+    System.out.println("Proveedor registrado con éxito.");
+    }
+
 
     private void registrarProducto() {
         if (proveedores.isEmpty()) {
@@ -164,6 +190,21 @@ public class Controlador {
                         () -> System.out.println("Proveedor no encontrado.")
                 );
     }
+
+    private void buscarProveedorPorNombre() {
+    System.out.print("Ingrese el nombre del proveedor: ");
+    String nombre = scanner.nextLine().trim();
+
+    proveedores.stream()
+            .filter(p -> p.getNombre().equalsIgnoreCase(nombre))
+            .findFirst()
+            .ifPresentOrElse(
+                    System.out::println,
+                    () -> System.out.println("Proveedor no encontrado.")
+            );
+}
+
+    
 
     private void buscarProductoPorNombre() {
         System.out.print("Ingrese el nombre del producto: ");
