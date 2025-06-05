@@ -49,7 +49,8 @@ de proveedores, productos y solicitudes de compra, usando principios de Programa
 
 ## Diagrama de Clases del Proyecto
 
-![image](https://github.com/user-attachments/assets/71b711f4-b6d4-4d74-881b-2422873a3ea0)
+![image](https://github.com/user-attachments/assets/54b998d4-0612-4da1-b7df-7e48e3b73ca0)
+
 
 ## Cómo ejecutar el proyecto
 
